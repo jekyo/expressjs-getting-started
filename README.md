@@ -24,7 +24,9 @@ If you don't have a Jekyo account, you can create one in the terminal by running
 
 Clone the Jekyo repository containing an Express app skeleton by running: 
 
-`git clone https://github.com/ink16/expressjs-getting-started.git`
+```
+git clone https://github.com/ink16/expressjs-getting-started.git
+```
 
 **Alternatively**, you can follow [these instructions](https://expressjs.com/en/starter/generator.html) to create the same app yourself using _express-generator_, or [these instructions](https://expressjs.com/en/starter/hello-world.html) to create a single page 'hello world' app. 
 
