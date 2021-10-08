@@ -1,5 +1,7 @@
 # Tutorial: Deploying a basic Express app on Jekyo
 
+Demo app [here](https://express-demo.jekyo.app/)
+
 ### Prerequisites
 
 Make sure you have [NodeJS](https://nodejs.org/en/download/), [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [git](https://github.com/git-guides/install-git) installed.
@@ -20,35 +22,34 @@ You have successfully signed in!
 ```
 If you don't have a Jekyo account, you can create one in the terminal by running `jekyo user:signup`. 
 
-## Create an Express app skeleton
-
-## Method 1
+## 1. Create a basic Express app
 
 You can start your Express project by using `jekyo create`
 
-Using the **arrows** on your keyboard, select expressjs and press **enter**.  
+Using the **arrows** on your keyboard, select **express** and press **enter**.  
 ```
 ? Select template
   None Creates only the application
-❯ expressjs A basic app skeleton using [Express](https://expressjs.com/)     
+  expressjs A basic app skeleton using [Express](https://expressjs.com/)     
   nuxt-js A boilerplate SSR application using [Nuxt.js](https://nuxtjs.org/) 
+❯ express A basic starter app using [express](https://expressjs.com/)
 ```
-
 When prompted, enter the desired name for your Express app. 
 
-`Application name?: express-on-jekyo`
+`Application name?: express-tutorial`
 
-This will create a basic Express app in the current directory by cloning this [Express app skeleton](https://github.com/jekyo/expressjs-getting-started) repository.
+This will create a basic express app in the current directory by cloning this [express starter app](https://github.com/jekyo/express-getting-started) repository.
 
 ```
 Cloning source code... OK
 Application created!
 ```
+
 ### Deploy the Express app on Jekyo
 
 To deploy the app, first navigate to the newly created directory:
 
-`cd express-on-jekyo`
+`cd express-tutorial`
 
 Now you can deploy this app to Jekyo by running: 
 
@@ -62,46 +63,40 @@ After a while, you should see something like this:
 ➜  Publishing application, this might take a while  ... OK
 ➜  Deploying application ... OK        
 ➜  Waiting for application to start ... OK
-➜  Visit your app on: https://express-on-jekyo.jekyo.app ... OK
+➜  Visit your app on: https://express-tutorial.jekyo.app ... OK
 ```
 
-You can now browse to your Express app on https://express-on-jekyo.jekyo.app (replace 'express-on-jekyo' with your app name)
+You can now browse to your Express app on https://express-tutorial.jekyo.app (replace 'express-tutorial' with your app name)
 
-## Method 2
+## 2. Deploying an existing Express app
 
-Clone the Jekyo repository containing an Express app skeleton by running: 
+Navigate to your local Express app directory
 
-```
-git clone https://github.com/ink16/expressjs-getting-started.git
-```
+`cd my-express-app`
 
-**Alternatively**, you can follow [these instructions](https://expressjs.com/en/starter/generator.html) to create the same app yourself using _express-generator_, or [these instructions](https://expressjs.com/en/starter/hello-world.html) to create a single page 'hello world' app. 
+Initialize a git repository if you haven't already done so by running `git init`. 
 
-Navigate to the cloned repository:
+Create an empty Jekyo app:
 
-`cd expressjs-getting-started`
-
-### Deploy the Express app on Jekyo
-
-`jekyo create`
+`jekyo create` 
 
 Select 'none' using the **arrows** on your keyboard and press **enter**. This will create an app using your current directory. 
+
 ```
 ? Select template (Use arrow keys)
-❯ None Creates only the application
+❯ None Creates an application from your current directory
 ```
 
 Name your app: 
 
-`Application name?: express-on-jekyo`
+`Application name?: my-express-app`
 
-Run `jekyo link` to link your local app to the remote Jekyo app. Select 'express-on-jekyo' using the **arrows** on your keyboard and press **enter**.
+Run `jekyo link` to link your local app to the remote Jekyo app. Select 'my-express-app' using the **arrows** on your keyboard and press **enter**.
 
 ```
 ? Select application (Use arrow keys)
-❯ express-on-jekyo
+❯ my-express-app
 ```
-
 Now you can deploy this app to Jekyo by running: 
 
 `jekyo deploy`
@@ -114,10 +109,10 @@ After a while, you should see something like this:
 ➜  Publishing application, this might take a while  ... OK
 ➜  Deploying application ... OK        
 ➜  Waiting for application to start ... OK
-➜  Visit your app on: https://express-on-jekyo.jekyo.app ... OK
+➜  Visit your app on: https://my-express-app.jekyo.app ... OK
 ```
 
-You can now browse to your Express app on https://express-on-jekyo.jekyo.app (replace 'express-on-jekyo' with your app name)
+You can now browse to your express app on https://my-express-app.jekyo.app (replace 'my-express-app' with your app name)
 
 ## Pushing local changes to Jekyo 
 
@@ -134,4 +129,3 @@ Now, simply deploy your app again:
 `jekyo deploy`
 
 You will see your changes on your live app after a short while. 
-
